@@ -1,11 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Product } from '../models/product';
+import { ProductService } from '../product-service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-list',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css'
 })
-export class ProductList {
+export class ProductList implements OnInit {
+  products: Product[] = []
 
+  constructor(private proService : ProductService){
+
+  }
+  
+  ngOnInit(): void {
+    this.proService.getProduct().subscribe(data => {
+      this.products =  data;
+    })
+  }
 }
