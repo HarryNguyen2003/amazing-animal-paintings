@@ -1,1 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'primeflex/themes/primeone-dark.scss' as *;
+@use 'primeflex/themes/primeone-light.scss' as *;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&subset=vietnamese');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Lobster&display=swap');
+@import 'primeicons/primeicons.css';
+@import 'primeflex/primeflex.min.css';
