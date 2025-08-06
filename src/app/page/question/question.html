@@ -1,0 +1,23 @@
+<form [formGroup]="formCreateFormQuestion" (ngSubmit)="onSubmit()">
+  <div formArrayName="questions">
+    <div
+      *ngFor="let question of questions.controls; let i = index"
+      [formGroupName]="i"
+    >
+      <label>Câu hỏi {{ i + 1 }}</label>
+      <textarea
+        rows="5"
+        cols="30"
+        pTextarea
+        formControlName="question"
+      ></textarea>
+      <input type="text" formControlName="answerA" />
+      <input type="text" formControlName="answerB" />
+      <input type="text" formControlName="answerC" />
+      <input type="text" formControlName="answerD" />
+      <button type="button" (click)="removeQuestion(i)">Xoá</button>
+    </div>
+  </div>
+  <button type="button" (click)="createQuestionItem()">➕ Thêm câu hỏi</button>
+  <button type="submit">✅ Gửi</button>
+</form>
