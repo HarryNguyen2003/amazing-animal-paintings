@@ -4,7 +4,6 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { ICartItem } from './models/interfaces';
 import { environment } from '../../../environments/environment';
 import { ProductService } from '../product/product-service';
-import { Product } from '../product/models/product';
 @Injectable({
   providedIn: 'root'
 })
@@ -29,26 +28,51 @@ export class CartService {
     })
   }
 
-  addToCartAndLoad(id: number) {
-    this.productService.getProductById(id).subscribe((product) => {
-      const CartItem: Omit<ICartItem, 'id'> = {
-        "id_Item" : product.id,
-        "quantity" : 1,
-        "name": product.name,
-        "price": product.price,
-        "img_url": product.img_url
-      }
-
-      this.addToCart(CartItem).subscribe(() => {
-        this.loadCartCount()
-      })
-    });
-
-  }
-
   addToCart(data: Omit<ICartItem, 'id'>): Observable<void> {
     return this.http.post<void>(this.apiUrl, data)
   }
+
+  addToCartAndLoad(id: number) {
+    this.getItemCartByProductId(id).subscribe(cartItem => {
+      if (cartItem.length > 0) {
+        const item = cartItem[0];
+        const updateItem = { ...item, quantity: item.quantity + 1 }
+
+        this.http.put(`${this.apiUrl}/${item.id}`, updateItem).subscribe({
+
+        })
+      } else {
+
+        this.productService.getProductById(id).subscribe((product) => {
+          const CartItem: Omit<ICartItem, 'id'> = {
+            "id_Item": product.id,
+            "quantity": 1,
+            "name": product.name,
+            "price": product.price,
+            "img_url": product.img_url
+          }
+
+          this.addToCart(CartItem).subscribe(() => {
+            this.loadCartCount()
+          })
+        });
+
+      }
+    })
+
+
+
+  }
+
+  getItemCartByProductId(id: number): Observable<ICartItem[]> {
+    return this.http.get<ICartItem[]>(`${this.apiUrl}?id_Item=${id}`)
+  }
+
+
+
+
+
+
 
 
 }

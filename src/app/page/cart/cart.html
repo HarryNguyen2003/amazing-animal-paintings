@@ -1,1 +1,48 @@
-<p>cart works!</p>
+<div class="container">
+  <h2>Cart</h2>
+
+  <div>
+    <p-dataview #dv [value]="cartItemList">
+      <ng-template #list let-items>
+        <div class="grid grid-cols-12 gap-4 grid-nogutter">
+          <div
+            class="col-span-12"
+            *ngFor="let item of items; let first = first"
+            class="col-span-12"
+          >
+            <div
+              class="flex flex-row p-6 gap-4"
+              [ngClass]="{
+                'border-t border-surface-200 dark:border-surface-700': !first
+              }"
+            >
+              <div class="flex">
+                <img
+                  class="xl:block rounded-border w-5 pr-4"
+                  src="{{ item.img_url }}"
+                  [alt]="item.name"
+                />
+
+                <div
+                  class="flex flex-column md:flex-col justify-between items-start gap-2"
+                >
+                  <div>
+                    <div
+                      class="text-lg font-medium text-surface-900 dark:text-surface-0 mt-2"
+                    >
+                      {{ item.name }}
+                    </div>
+                    <span
+                      class="text-xl font-semibold text-surface-900 dark:text-surface-0"
+                      >{{ "$" + item.price }}</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-dataview>
+  </div>
+</div>

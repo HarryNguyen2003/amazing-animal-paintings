@@ -75,84 +75,100 @@
   ],
   "cart": [
     {
-      "id": "0",
-      "id_Item": 0,
-      "name": "Product 12",
-      "price": 550,
-      "img_url": "/assets/imgs/Product_12.jpg",
-      "quantity": 1
-    },
-    {
-      "id": "cb12",
+      "id": "c48b",
       "id_Item": "1",
-      "quantity": 1,
+      "quantity": 8,
       "name": "Product 1",
       "price": 100,
       "img_url": "/assets/imgs/Product_01.jpg"
     },
     {
-      "id": "ea1b",
+      "id": "b29d",
       "id_Item": "2",
-      "quantity": 1,
+      "quantity": 7,
       "name": "Product 2",
       "price": 120,
       "img_url": "/assets/imgs/Product_02.jpg"
     },
     {
-      "id": "ed29",
+      "id": "43bd",
       "id_Item": "3",
-      "quantity": 1,
+      "quantity": 5,
       "name": "Product 3",
       "price": 150,
       "img_url": "/assets/imgs/Product_03.jpg"
     },
     {
-      "id": "1985",
+      "id": "5775",
       "id_Item": "4",
-      "quantity": 1,
+      "quantity": 7,
       "name": "Product 4",
       "price": 180,
       "img_url": "/assets/imgs/Product_04.jpg"
     },
     {
-      "id": "66f2",
-      "id_Item": "3",
+      "id": "5599",
+      "id_Item": "5",
       "quantity": 1,
-      "name": "Product 3",
-      "price": 150,
-      "img_url": "/assets/imgs/Product_03.jpg"
+      "name": "Product 5",
+      "price": 200,
+      "img_url": "/assets/imgs/Product_05.jpg"
     },
     {
-      "id": "58be",
-      "id_Item": "3",
+      "id": "8e32",
+      "id_Item": "6",
       "quantity": 1,
-      "name": "Product 3",
-      "price": 150,
-      "img_url": "/assets/imgs/Product_03.jpg"
+      "name": "Product 6",
+      "price": 250,
+      "img_url": "/assets/imgs/Product_06.jpg"
     },
     {
-      "id": "f2c5",
-      "id_Item": "3",
+      "id": "4c55",
+      "id_Item": "7",
       "quantity": 1,
-      "name": "Product 3",
-      "price": 150,
-      "img_url": "/assets/imgs/Product_03.jpg"
+      "name": "Product 7",
+      "price": 300,
+      "img_url": "/assets/imgs/Product_07.jpg"
     },
     {
-      "id": "5cd5",
-      "id_Item": "3",
+      "id": "bea5",
+      "id_Item": "8",
       "quantity": 1,
-      "name": "Product 3",
-      "price": 150,
-      "img_url": "/assets/imgs/Product_03.jpg"
+      "name": "Product 8",
+      "price": 350,
+      "img_url": "/assets/imgs/Product_08.jpg"
     },
     {
-      "id": "4fa4",
-      "id_Item": "3",
+      "id": "e53a",
+      "id_Item": "9",
       "quantity": 1,
-      "name": "Product 3",
-      "price": 150,
-      "img_url": "/assets/imgs/Product_03.jpg"
+      "name": "Product 9",
+      "price": 400,
+      "img_url": "/assets/imgs/Product_09.jpg"
+    },
+    {
+      "id": "f58e",
+      "id_Item": "10",
+      "quantity": 1,
+      "name": "Product 10",
+      "price": 450,
+      "img_url": "/assets/imgs/Product_10.jpg"
+    },
+    {
+      "id": "0e82",
+      "id_Item": "11",
+      "quantity": 1,
+      "name": "Product 11",
+      "price": 500,
+      "img_url": "/assets/imgs/Product_11.jpg"
+    },
+    {
+      "id": "56e4",
+      "id_Item": "12",
+      "quantity": 1,
+      "name": "Product 12",
+      "price": 550,
+      "img_url": "/assets/imgs/Product_12.jpg"
     }
   ]
 }

@@ -10,5 +10,4 @@ export const routes: Routes = [
     {path: '',  redirectTo: '/products', pathMatch: 'full'},
     {path: 'products', component:ProductList},
     {path:'cart',component:CartComponent},
-    {path:'question',component:QuestionComponent}
 ];
