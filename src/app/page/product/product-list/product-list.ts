@@ -4,6 +4,7 @@ import { ProductService } from '../product-service';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { CardModule } from 'primeng/card';
+import { CartService } from '../../cart/cart-service';
 
 @Component({
   selector: 'app-product-list',
@@ -14,7 +15,7 @@ import { CardModule } from 'primeng/card';
 export class ProductList implements OnInit {
   products: Product[] = []
 
-  constructor(private proService : ProductService){
+  constructor(private proService : ProductService, private cartService:CartService){
 
   }
   
@@ -22,5 +23,9 @@ export class ProductList implements OnInit {
     this.proService.getProduct().subscribe(data => {
       this.products =  data;
     })
+  }
+
+  addToCart(id: number) {
+    this.cartService.addToCartAndLoad(id);
   }
 }

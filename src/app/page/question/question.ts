@@ -24,7 +24,7 @@ export class QuestionComponent {
   // t tạo 1 getter để lấy ra thằng formArray questions từ formCreateFormQuestion
   get questions(): FormArray {
 
-    // éo thể truy cập từ this vì thằng questions éo phải là một biến class cx éo phải thược tính mặc định nó chỉ là 1 key trong form
+    // éo thể truy cập từ this vì thằng questions éo phải là một biến class cx éo phải thuộc tính mặc định nó chỉ là 1 key trong form
     // Thêm "as FormArray" dùng để ép kiểu cho thằng này thành FormArray để dùng push(),....
     return this.formCreateFormQuestion.get('questions') as FormArray;
   }
